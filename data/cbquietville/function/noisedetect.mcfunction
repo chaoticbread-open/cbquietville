@@ -5,7 +5,7 @@ scoreboard players operation @a noise_last = @a noise
 
 # Detect movement noise
 execute as @a store result score @s noise_delta run scoreboard players operation @s walk -= @s walk_last
-execute as @a[scores={noise_delta=1..}] run scoreboard players add @s noise 20
+execute as @a[scores={noise_delta=1..}] run scoreboard players add @s noise 10
 scoreboard players operation @a walk_last = @a walk
 
 # Detect jumping noise
