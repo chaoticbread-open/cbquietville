@@ -1,3 +1,2 @@
-# Called every tick
-execute as @a run function cbquietville:increase_noise
-execute as @a run function noise_warden:check_noise
+# Noise decay: subtract 1 noise per tick, but don’t go below 0
+execute as @a[scores={noise=1..}] run scoreboard players remove @s noise 1
