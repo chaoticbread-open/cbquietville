@@ -1,7 +1,10 @@
+# This function initalizes the datapack for use, with the added bonus of resetting the datapack
+# "hello world"
+
 # Kill all wardens on load
 kill @e[type=minecraft:warden]
 
-# Create required scoreboards
+# Adds objectives necessary for movement detection
 scoreboard objectives add noise dummy
 scoreboard objectives add noise_last dummy
 scoreboard objectives add noise_delta dummy
@@ -13,14 +16,7 @@ scoreboard objectives add walk_last dummy
 scoreboard objectives add sprint_last dummy
 scoreboard objectives add jump_last dummy
 
-scoreboard objectives add chest minecraft.custom:minecraft.open_chest
-scoreboard objectives add use minecraft.used:minecraft.crafting_table
-scoreboard objectives add interact minecraft.custom:minecraft.interact_with_crafting_table
-scoreboard objectives add chest_last dummy
-scoreboard objectives add use_last dummy
-scoreboard objectives add interact_last dummy
-
-# Decay Timer
+# Adds objectives to keep track of noise level, as well as to simulate decay
 scoreboard objectives add noise_timer dummy
 scoreboard objectives add noise dummy
 

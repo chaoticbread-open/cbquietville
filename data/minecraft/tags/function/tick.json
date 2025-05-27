@@ -1,7 +1,7 @@
 {
   "values": [
-    "cbquietville:noisedetect",
-    "cbquietville:checktick",
+    "cbquietville:movementdetect",
+    "cbquietville:decay",
     "cbquietville:checkwarden"
   ]
 }
