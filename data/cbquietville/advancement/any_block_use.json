@@ -1,0 +1,10 @@
+{
+  "criteria": {
+    "any_block_mined": {
+      "trigger": "minecraft:any_block_use"
+    }
+  },
+  "rewards": {
+    "function": "cbquietville:on_block_use"
+  }
+}

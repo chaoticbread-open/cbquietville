@@ -21,12 +21,6 @@ execute as @a[scores={noise_delta=1..}] run scoreboard players set @s noise_delt
 execute as @a[scores={noise_delta=1..}] run scoreboard players add @s noise 2
 scoreboard players operation @a jump_last = @a jump
 
-# Detect mining noise
-execute as @a store result score @s noise_delta run scoreboard players operation @s mineA -= @s mineA_last
-execute as @a[scores={noise_delta=1..}] run scoreboard players set @s noise_delta 1
-execute as @a[scores={noise_delta=1..}] run scoreboard players add @s noise 5
-scoreboard players operation @a mineA_last = @a mine
-
 # Detect Crafting use noise
 execute as @a store result score @s noise_delta run scoreboard players operation @s use -= @s use_last
 execute as @a[scores={noise_delta=1..}] run scoreboard players set @s noise_delta 1

@@ -1,0 +1,10 @@
+{
+  "criteria": {
+    "any_block_placed": {
+      "trigger": "minecraft:placed_block"
+    }
+  },
+  "rewards": {
+    "function": "cbquietville:on_block_place"
+  }
+}

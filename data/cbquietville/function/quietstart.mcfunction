@@ -20,9 +20,6 @@ scoreboard objectives add chest_last dummy
 scoreboard objectives add use_last dummy
 scoreboard objectives add interact_last dummy
 
-scoreboard objectives add mineA minecraft.mined:minecraft.stone
-scoreboard objectives add mineA_last dummy
-
 # Decay Timer
 scoreboard objectives add noise_timer dummy
 scoreboard objectives add noise dummy
