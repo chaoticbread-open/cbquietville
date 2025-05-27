@@ -24,3 +24,5 @@ scoreboard objectives add noise dummy
 scoreboard players reset @a noise
 scoreboard players reset @a noise_last
 scoreboard players reset @a noise_delta
+
+tellraw @a ["",{"text":"==========================================","color":"gray"},{"text":"\nWelcome to "},{"text":"quietville","bold":true,"color":"#DDA2FF"},{"text":", a chaoticbread challenge\nCheck your advancements for more information\n\nThanks from the chaoticbread (Website: chaoticbread.carrd.co)\n"},{"text":"(this message will only be shown once.)\n==========================================","color":"gray"},{"text":"\n "}]
