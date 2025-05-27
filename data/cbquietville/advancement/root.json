@@ -1,0 +1,28 @@
+{
+    "display": {
+      "icon": {
+        "id": "minecraft:sculk_sensor",
+        "components": {
+          "minecraft:profile": {
+            "name": "chaoticbread"
+          }
+        }
+      },
+      "title": "Current Challenge: Quietville",
+      "description": {
+      "text": "Most actions in-game will increase your noise level, indicated above your hotbar. Make too much noise, and you will be hunted down.",
+      "color": "gray"
+      },
+      "background": "minecraft:block/sculk",
+      "frame": "goal",
+      "show_toast": true,
+      "announce_to_chat": false,
+      "hidden": false
+    },
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:tick"
+      }
+    },
+    "sends_telemetry_event": false
+  }

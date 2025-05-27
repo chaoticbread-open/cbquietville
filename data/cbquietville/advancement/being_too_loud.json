@@ -1,0 +1,23 @@
+{
+  "criteria": {
+    "through_spawn_only": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+
+  "parent": "cbquietville:root",
+
+  "display": {
+    "icon": {
+        "id": "minecraft:warden_spawn_egg"
+    },
+    "title": "WHAT HAVE YOU DONE???",
+    "description": {
+      "text": "§eCause too much noise, spawning a warden for the first time."
+    },
+    "show_toast": true,
+    "frame": "challenge",
+    "announce_to_chat": true,
+    "hidden": false
+  }
+}
