@@ -2,6 +2,7 @@
   "values": [
     "cbquietville:movementdetect",
     "cbquietville:decay",
-    "cbquietville:checkwarden"
+    "cbquietville:checkwarden",
+    "cbquietville:displaymeter"
   ]
 }

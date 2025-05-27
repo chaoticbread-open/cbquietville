@@ -4,5 +4,5 @@
 # "maybe stop chewing with your mouth open"
 
 # adds to noise level and resets advancement for re-detection
-scoreboard players add @s noise 10
+scoreboard players add @s noise 1
 advancement revoke @s only cbquietville:any_tool_use_a
