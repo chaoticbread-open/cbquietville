@@ -10,6 +10,8 @@ execute as @a[scores={cooldown_timer=0..59}] run scoreboard players set @s coold
 execute as @a[scores={cooldown_timer=60..139}] run scoreboard players set @s cooldown_stage 2
 execute as @a[scores={cooldown_timer=140..239}] run scoreboard players set @s cooldown_stage 3
 execute as @a[scores={cooldown_timer=240..}] run scoreboard players set @s cooldown_stage 4
+
+
 # --- Decay based on cooldown_stage ---
 
 # Stage 1: -1 noise every 4 ticks
@@ -25,5 +27,6 @@ execute as @a[scores={cooldown_stage=3, noise=1..}] run scoreboard players remov
 execute as @a[scores={cooldown_stage=3}] run scoreboard players set @s noise_timer 0
 
 # Stage 4: -2 noise every tick
-execute as @a[scores={cooldown_stage=4, noise=1..}] run scoreboard players remove @s noise 2
+execute as @a[scores={cooldown_stage=4, noise=2..}] run scoreboard players remove @s noise 2
+execute as @a[scores={cooldown_stage=4, noise=1}] run scoreboard players set @s noise 0
 execute as @a[scores={cooldown_stage=4}] run scoreboard players set @s noise_timer 0
