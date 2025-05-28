@@ -1,12 +1,15 @@
 # This function is responsible for the decay of a player's noise level over time.
 # "Like how every sound goes quiet, noise goes quiet too"
 
-# Every tick, increment a timer for all players
-scoreboard players add @a noise_timer 1
+# Increment cooldown timer for all players
+execute as @a run scoreboard players add @s cooldown_timer 1
 
-# If timer reaches 4 ticks, reduce noise by 1 and reset timer
-execute as @a[scores={noise_timer=3.., noise=1..}] run scoreboard players remove @s noise 1
-execute as @a[scores={noise_timer=3..}] run scoreboard players set @s noise_timer 0
-
-# Prevents negative values (this is redundant)
-execute as @a[scores={noise=-999999..0}] run scoreboard players set @s noise 0
+# --- Decay Logic ---
+# 20–80 ticks → -1 noise / 4 ticks
+execute as @a[scores={cooldown_timer=20..80}] if score @s cooldown_timer matches 4.. run scoreboard players remove @s noise 1
+# 80–160 ticks → -1 noise / 2 ticks
+execute as @a[scores={cooldown_timer=80..160}] if score @s cooldown_timer matches 2.. run scoreboard players remove @s noise 1
+# 160–300 ticks → -1 noise / tick
+execute as @a[scores={cooldown_timer=160..300}] run scoreboard players remove @s noise 1
+# 300+ ticks → -2 noise / tick
+execute as @a[scores={cooldown_timer=300..}] run scoreboard players remove @s noise 2

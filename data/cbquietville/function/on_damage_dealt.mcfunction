@@ -5,4 +5,5 @@
 
 # adds to noise level and resets advancement for re-detection
 scoreboard players add @s noise 15
+scoreboard players set @s cooldown_timer 0
 advancement revoke @s only cbquietville:dealt_any_damage
