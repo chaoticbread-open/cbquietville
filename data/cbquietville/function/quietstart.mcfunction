@@ -21,6 +21,9 @@ scoreboard objectives add noise_timer dummy
 scoreboard objectives add cooldown_timer dummy
 scoreboard objectives add cooldown_stage dummy
 
+# Objective to mark a players use of a exempted tool
+scoreboard objectives add ExemptToolUsed dummy
+
 # Noise objective to keep track of noise levels
 scoreboard objectives add noise dummy
 

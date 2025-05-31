@@ -1,0 +1,19 @@
+{
+  "criteria": {
+    "any_item_used": {
+      "trigger": "minecraft:using_item",
+        "conditions": {
+                "item": {
+                    "items": [
+                        "minecraft:shield",
+                        "minecraft:bow",
+                        "minecraft:crossbow"
+                    ]
+                }
+        }
+    }
+  },
+  "rewards": {
+    "function": "cbquietville:toolexempthandling"
+  }
+}
