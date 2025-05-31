@@ -18,8 +18,6 @@ scoreboard objectives add jump_last dummy
 
 # Adds objectives to keep track of noise level, as well as to simulate decay
 scoreboard objectives add noise_timer dummy
-<<<<<<< Updated upstream
-=======
 scoreboard objectives add cooldown_timer dummy
 scoreboard objectives add cooldown_stage dummy
 
@@ -27,7 +25,6 @@ scoreboard objectives add cooldown_stage dummy
 scoreboard objectives add ExemptToolUsed dummy
 
 # Noise objective to keep track of noise levels
->>>>>>> Stashed changes
 scoreboard objectives add noise dummy
 
 # Reset all scores for a clean state
