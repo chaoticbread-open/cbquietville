@@ -16,7 +16,7 @@ scoreboard objectives add walk_last dummy
 scoreboard objectives add sprint_last dummy
 scoreboard objectives add jump_last dummy
 
-# Adds objectives to keep track of noise level, as well as to simulate decay
+# Adds objectives to necessary for noise decay
 scoreboard objectives add noise_timer dummy
 scoreboard objectives add cooldown_timer dummy
 scoreboard objectives add cooldown_stage dummy

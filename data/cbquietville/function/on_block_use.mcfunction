@@ -6,3 +6,8 @@
 # adds to noise level and resets advancement for re-detection
 scoreboard players add @s noise 15
 advancement revoke @s only cbquietville:any_block_use
+
+# Reset timers when any noise action is made
+scoreboard players set @s cooldown_timer 0
+scoreboard players set @s cooldown_stage 0
+scoreboard players set @s noise_timer 0
