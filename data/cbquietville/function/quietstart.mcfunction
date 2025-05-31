@@ -5,7 +5,6 @@
 kill @e[type=minecraft:warden]
 
 # Adds objectives necessary for movement detection
-scoreboard objectives add noise dummy
 scoreboard objectives add noise_last dummy
 scoreboard objectives add noise_delta dummy
 
