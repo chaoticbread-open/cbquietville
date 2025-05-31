@@ -14,6 +14,6 @@
     }
   },
   "rewards": {
-    "function": "cbquietville:toolexempthandling"
+    "function": "cbquietville:tool_exempt_handle"
   }
 }
