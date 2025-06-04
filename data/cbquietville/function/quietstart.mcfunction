@@ -11,9 +11,14 @@ scoreboard objectives add noise_delta dummy
 scoreboard objectives add walk minecraft.custom:minecraft.walk_one_cm
 scoreboard objectives add sprint minecraft.custom:minecraft.sprint_one_cm
 scoreboard objectives add jump minecraft.custom:minecraft.jump
+
 scoreboard objectives add walk_last dummy
 scoreboard objectives add sprint_last dummy
 scoreboard objectives add jump_last dummy
+
+scoreboard objectives add walk_delta dummy
+scoreboard objectives add sprint_delta dummy
+scoreboard objectives add jump_delta dummy
 
 # Adds objectives to necessary for noise decay
 scoreboard objectives add noise_timer dummy

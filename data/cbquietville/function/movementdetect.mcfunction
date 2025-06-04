@@ -2,34 +2,29 @@
 # "move and you die :)"
 
 # Copy previous noise to noise_last
-scoreboard players operation @a noise_last = @a noise
+execute as @a run scoreboard players operation @s noise_last = @s noise
 
 # Detect Walking
-execute as @a store result score @s noise_delta run scoreboard players operation @s walk -= @s walk_last
-execute as @a[scores={noise_delta=1..}] unless score @s ExemptToolUsed matches 1 run function cbquietville:movement_reset
-execute as @a[scores={noise_delta=1..}] unless score @s ExemptToolUsed matches 1 run scoreboard players set @s noise_delta 1
-execute as @a[scores={noise_delta=1..}] unless score @s ExemptToolUsed matches 1 run scoreboard players add @s noise 1
-scoreboard players operation @a walk_last = @a walk
+execute as @a run scoreboard players operation @s walk_delta = @s walk
+execute as @a run scoreboard players operation @s walk_delta -= @s walk_last
+execute as @a[scores={walk_delta=1..}] unless score @s ExemptToolUsed matches 1 run function cbquietville:movement_reset
+execute as @a[scores={walk_delta=1..}] unless score @s ExemptToolUsed matches 1 run scoreboard players add @s noise 1
+execute as @a run scoreboard players operation @s walk_last = @s walk
 
 # Detect Sprinting
-execute as @a store result score @s noise_delta run scoreboard players operation @s sprint -= @s sprint_last
-execute as @a[scores={noise_delta=1..}] unless score @s ExemptToolUsed matches 1 run function cbquietville:movement_reset
-execute as @a[scores={noise_delta=1..}] unless score @s ExemptToolUsed matches 1 run scoreboard players set @s noise_delta 1
-execute as @a[scores={noise_delta=1..}] unless score @s ExemptToolUsed matches 1 run scoreboard players add @s noise 2
-scoreboard players operation @a sprint_last = @a sprint
+execute as @a run scoreboard players operation @s sprint_delta = @s sprint
+execute as @a run scoreboard players operation @s sprint_delta -= @s sprint_last
+execute as @a[scores={sprint_delta=1..}] unless score @s ExemptToolUsed matches 1 run function cbquietville:movement_reset
+execute as @a[scores={sprint_delta=1..}] unless score @s ExemptToolUsed matches 1 run scoreboard players add @s noise 2
+execute as @a run scoreboard players operation @s sprint_last = @s sprint
 
 # Detect Jumping
-execute as @a store result score @s noise_delta run scoreboard players operation @s jump -= @s jump_last
-execute as @a[scores={noise_delta=1..}] unless score @s ExemptToolUsed matches 1 run function cbquietville:movement_reset
-execute as @a[scores={noise_delta=1..}] unless score @s ExemptToolUsed matches 1 run scoreboard players set @s noise_delta 1
-execute as @a[scores={noise_delta=1..}] unless score @s ExemptToolUsed matches 1 run scoreboard players add @s noise 4
-scoreboard players operation @a jump_last = @a jump
-
-# Step 3: Add delta to noise
-# (This line may be redundant if noise was already incremented above, but if kept:)
-execute as @a unless score @s ExemptToolUsed matches 1 run scoreboard players operation @s noise += @s noise_delta
+execute as @a run scoreboard players operation @s jump_delta = @s jump
+execute as @a run scoreboard players operation @s jump_delta -= @s jump_last
+execute as @a[scores={jump_delta=1..}] unless score @s ExemptToolUsed matches 1 run function cbquietville:movement_reset
+execute as @a[scores={jump_delta=1..}] unless score @s ExemptToolUsed matches 1 run scoreboard players add @s noise 4
+execute as @a run scoreboard players operation @s jump_last = @s jump
 
 # Step 4: Reset delta
-scoreboard players set @a noise_delta 0
-scoreboard players set @a ExemptToolUsed 0
+execute as @a run scoreboard players set @s ExemptToolUsed 0
 
