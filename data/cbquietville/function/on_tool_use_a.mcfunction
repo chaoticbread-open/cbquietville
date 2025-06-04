@@ -12,4 +12,5 @@ execute unless score @s ExemptToolUsed matches 1 run scoreboard players set @s c
 execute unless score @s ExemptToolUsed matches 1 run scoreboard players set @s cooldown_stage 0
 execute unless score @s ExemptToolUsed matches 1 run scoreboard players set @s noise_timer 0
 
-advancement revoke @s only cbquietville:tool_a_exception
+advancement revoke @s only cbquietville:tool_a_exempt
+# reset the exempt advancement for the next use
