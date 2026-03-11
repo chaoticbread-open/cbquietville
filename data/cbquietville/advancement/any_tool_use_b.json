@@ -39,7 +39,13 @@
                         "netherite_hoe",
                         "netherite_pickaxe",
                         "netherite_shovel",
-                        "netherite_sword"
+                        "netherite_sword",
+
+                        "copper_axe",
+                        "copper_hoe",
+                        "copper_pickaxe",
+                        "copper_shovel"
+                        "copper_sword"
                     ]
                 }
             }
