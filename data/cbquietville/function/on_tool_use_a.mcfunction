@@ -4,7 +4,7 @@
 # "maybe stop chewing with your mouth open"
 
 # adds to noise level and resets advancement for re-detection
-execute unless score @s ExemptToolUsed matches 1 run scoreboard players add @s noise 5
+execute unless score @s ExemptToolUsed matches 1 run scoreboard players add @s noise 1
 advancement revoke @s only cbquietville:any_tool_use_a
 
 # Reset timers when any noise action is made
