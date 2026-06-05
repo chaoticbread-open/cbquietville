@@ -1,0 +1,28 @@
+{
+  "criteria": {
+    "warden_death": {
+      "trigger": "minecraft:entity_killed_player",
+      "conditions": {
+        "entity": {
+            "type": "minecraft:warden"
+        }
+      }
+    }
+  },
+
+  "parent": "cbquietville:being_too_loud",
+
+  "display": {
+    "icon": {
+        "id": "minecraft:poppy"
+    },
+    "title": "The consequences of your actions",
+    "description": {
+      "text": "§eGet killed by a warden for the first time."
+    },
+    "show_toast": true,
+    "frame": "challenge",
+    "announce_to_chat": true,
+    "hidden": false
+  }
+}

@@ -1,8 +1,9 @@
 # This function initalizes the datapack for use, with the added bonus of resetting the datapack
 # "hello world"
 
-# Kill all wardens on load
+# Kill all wardens on load (as well as their dropped catalysts)
 kill @e[type=minecraft:warden]
+kill @e[type=minecraft:item,nbt={Item:{id:"minecraft:sculk_catalyst"}}]
 
 # Adds objectives necessary for movement detection
 scoreboard objectives add noise_last dummy
@@ -31,9 +32,12 @@ scoreboard objectives add ExemptToolUsed dummy
 # Noise objective to keep track of noise levels
 scoreboard objectives add noise dummy
 
+# Cooldown objective to keep track of 
+scoreboard objectives add globalchilldown dummy
+
 # Reset all scores for a clean state
 scoreboard players reset @a noise
 scoreboard players reset @a noise_last
 scoreboard players reset @a noise_delta
 
-tellraw @a ["",{"text":"==========================================","color":"gray"},{"text":"\nWelcome to "},{"text":"quietville","bold":true,"color":"#DDA2FF"},{"text":", a chaoticbread challenge\nCheck your advancements for more information\n\nThanks from the chaoticbread (Website: chaoticbread.carrd.co)\n"},{"text":"(this message will only be shown once.)\n==========================================","color":"gray"},{"text":"\n "}]
+tellraw @a ["",{"text":"==========================================","color":"gray"},{"text":"\nWelcome to "},{"text":"quietville","bold":true,"color":"#DDA2FF"},{"text":", a chaoticbread challenge\nCheck your advancements for more information\n\nThanks from the chaoticbread\n"},{"text":"(this message will only be shown once.)\n==========================================","color":"gray"},{"text":"\n "}]

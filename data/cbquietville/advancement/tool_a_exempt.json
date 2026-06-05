@@ -7,7 +7,13 @@
                     "items": [
                         "minecraft:shield",
                         "minecraft:bow",
-                        "minecraft:crossbow"
+                        "minecraft:crossbow",
+                        "minecraft:wooden_spear",
+                        "minecraft:stone_spear",
+                        "minecraft:iron_spear",
+                        "minecraft:golden_spear",
+                        "minecraft:diamond_spear",
+                        "minecraft:netherite_spear"
                     ]
                 }
         }

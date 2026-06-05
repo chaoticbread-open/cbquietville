@@ -44,8 +44,18 @@
                         "copper_axe",
                         "copper_hoe",
                         "copper_pickaxe",
-                        "copper_shovel"
-                        "copper_sword"
+                        "copper_shovel",
+                        "copper_sword",
+                        
+                        "minecraft:wooden_spear",
+                        "minecraft:stone_spear",
+                        "minecraft:iron_spear",
+                        "minecraft:golden_spear",
+                        "minecraft:diamond_spear",
+                        "minecraft:netherite_spear",
+                        
+                        "minecraft:mace",
+                        "minecraft:trident"
                     ]
                 }
             }

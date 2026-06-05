@@ -12,3 +12,4 @@ execute as @a[scores={noise=280..319}] run title @s actionbar {"text":"Noise: �
 execute as @a[scores={noise=320..359}] run title @s actionbar {"text":"Noise: ▓▓▓▓▓▓▓▓░░ [","color":"red","extra":[{"score":{"name":"@s","objective":"noise"}},{"text":"/400]"}]}
 execute as @a[scores={noise=360..399}] run title @s actionbar {"text":"Noise: ▓▓▓▓▓▓▓▓▓░ [","color":"dark_red","extra":[{"score":{"name":"@s","objective":"noise"}},{"text":"/400]"}]}
 execute as @a[scores={noise=400..}] run title @s actionbar {"text":"Noise: ▓▓▓▓▓▓▓▓▓▓ [","color":"dark_red","extra":[{"score":{"name":"@s","objective":"noise"}},{"text":"/400]"}]}
+

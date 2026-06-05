@@ -3,6 +3,7 @@
     "cbquietville:movementdetect",
     "cbquietville:decay",
     "cbquietville:checkwarden",
-    "cbquietville:displaymeter"
+    "cbquietville:displaymeter",
+    "cbquietville:chilldown"
   ]
 }
